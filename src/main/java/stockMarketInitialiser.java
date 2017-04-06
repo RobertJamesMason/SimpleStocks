@@ -10,30 +10,10 @@ import java.util.List;
 /**
  * Created by Robert on 01/04/2017.
  */
-public class main {
+public class stockMarketInitialiser {
     public static void main(String[] args) {
 
-        List<Stock> stockList = populateMarket();
-
-        Stock dummy = stockList.get(0);
-
-        for(int i = 0 ; i < stockList.size() ; i++){
-            if(stockList.get(i).getSymbol().contains("POP")){
-                System.out.println("Found at index - " + i);
-            }
-        }
-
-        DividendYield dividendYield = new DividendYield(dummy);
-
-        List<Trade> allTrades = new ArrayList<Trade>();
-
-        PERatio peRatio = new PERatio(dummy);
-
-        System.out.println("This is the PE Ratio " + peRatio.calculatePERatio(5.0));
-
-        //PlaceTrade placeTrade = new PlaceTrade();
-       // placeTrade.makeTrade();
-
+        // logic is tested within the tests
     }
 
     private static List populateMarket(){
